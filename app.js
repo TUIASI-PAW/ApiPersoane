@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // pentru utilizarea perechi
 app.use(bodyParser.json());
 
 const persoane = [];
+persoane.push({ id: 101, nume: 'Popescu', prenume: 'Ana', email: 'ana.popescu@tuiasi.ro', data: 1288323623006 });
+persoane.push({ id: 102, nume: 'Ionescu', prenume: 'Ion', email: 'ion.ionescu@tuiasi.ro', data: 1288323623007 });
 
 app.get('/api/persoane', function (req, res) {
     console.log("GET");
@@ -38,10 +40,10 @@ app.delete('/api/persoane/:pid', function (req, res) {
 });
 
 app.listen(4300, function (err) {
-	if (err) {
-		console.log(err);
-	} else {
-		console.log('Serverul rulează pe portul ' + 4300);
-	}
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Serverul rulează pe portul ' + 4300);
+    }
 });
 
